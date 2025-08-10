@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aunty Betty's Lair</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sprites.css') }}">
+
+    <script src="static/auntybetty.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 bg-light sidebar px-0">
+                <div class="sidebar-sticky pt-3">
+                    <h4
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Go Back</span>
+                    </h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="characters">Characters</a>
+                        </li>
+                    </ul>
+                    <h4
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Player Stats</span>
+                    </h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">HP: <span id="HPDisplay">500</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="demonHPDisplay">Demon HP: 100</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="pestHPDisplay">Pest HP: 200</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="ScoreDisplay">Score: 0</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="TimeDisplay">Time: 00:00</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="pauseButton">Pause</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leaderboard">Leaderboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="restartButton">Restart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="game-container position-relative mt-5 pt-5">
+                    <canvas id="gameCanvas" class="canvas-responsive"></canvas>
+                </div>
+            </div>
+
+            <div id="restartGame" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <h2>GAME OVER</h2>
+                    <button id="restartButtonTwo">Restart Game</button>
+                </div>
+            </div>
+        </div>
+        <p id="character">
+            {% if character %}
+
+            {{ character }}
+        </p>
+
+        <script type="text/javascript">
+            var character = "{{ session['characterName'] }}"
+            selectCharacter(character);
+            drawCharacter();
+
+
+        </script>
+        {% endif %}
+
+</body>
+
+</html>

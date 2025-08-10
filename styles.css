@@ -1,0 +1,246 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #101010;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #000;
+    color: #fff;
+    margin: 20px;
+}
+
+.level-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.level-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.level-nav a:hover {
+    color: #FFD700;
+}
+
+.instructions {
+    background-color: #222;
+    color: #ddd;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.button,
+.play-button,
+.start-button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #101010;
+    padding: 15px 25px;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.button:hover,
+.play-button:hover,
+.start-button:hover {
+    background-color: #101010;
+    color: #FFD700;
+}
+
+.welcome-screen,
+.game-intro {
+    text-align: center;
+    padding: 50px;
+}
+
+.character-selection {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.character {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.character:hover {
+    transform: scale(1.05);
+}
+
+.character h3 {
+    margin: 0 0 10px 0;
+}
+
+.character p {
+    margin: 5px 0;
+}
+
+.character button {
+    cursor: pointer;
+    background-color: #FFD700;
+    color: #101010;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.character button:hover {
+    background-color: #101010;
+    color: #FFD700;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.canvas-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .game-container,
+    .welcome-screen,
+    .game-intro {
+        padding: 10px;
+        height: auto;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+.navbar {
+    background-color: #000000;
+    overflow: hidden; 
+    font-family: Arial, sans-serif; 
+}
+
+.navbar a {
+    float: left; 
+    display: block;
+    color: #FFD700; 
+    text-align: center;
+    padding: 14px 20px; 
+    text-decoration: none; 
+}
+
+.navbar a:hover {
+    background-color: #ddd; 
+    color: black; 
+}
+
+.navbar h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.custom-alert {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
