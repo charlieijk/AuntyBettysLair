@@ -1,0 +1,23 @@
+.hero-sprite {
+    background-image: url('hero_spritesheet.png');
+    width: 64px;
+    height: 64px;
+}
+
+.mystic-sprite {
+    background-image: url('mystic_spritesheet.png');
+    width: 64px;
+    height: 64px;
+}
+
+.rogue-sprite {
+    background-image: url('rogue_spritesheet.png');
+    width: 64px;
+    height: 64px;
+}
+
+.warrior-sprite {
+    background-image: url('warrior_spritesheet.png');
+    width: 64px;
+    height: 64px;
+}

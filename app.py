@@ -28,6 +28,7 @@ def handle_internal_error(e):
     logger.error(f"Internal server error: {e}")
     return "Internal Server Error", 500
 
+
 def login_required(view): 
     @wraps(view)
     def wrapped_view(*args, **kwargs): 
@@ -133,9 +134,13 @@ def signout():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     # Option 1: Run with HTTP (default) - using port 5001 to avoid conflicts
     app.run(debug=True, host='127.0.0.1', port=5001)
     
     # Option 2: Run with HTTPS (uncomment the line below and comment the line above)
     # app.run(debug=True, host='127.0.0.1', port=5001, ssl_context='adhoc')
+=======
+    app.run(debug=True)
+>>>>>>> af44998f954d3646bc0559ad6c037c0bea80a353
 
