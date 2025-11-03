@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block main_content %}
+
+<div class="welcome-screen">
+    {% if session.username %}
+    <p>Hello, {{ session.username }}! Lets have a go, shall we play? or do you want to <a href="{{ url_for('signout') }}">Logout....</a></p>
+    {% endif %}
+    <p>Prepare to embark on a thrilling space adventure!</p>
+    <p>
+        <a href="howtoplay" class="play-button">HOW TO PLAY</a>
+        <a href="characters" class="play-button">PLAY</a>
+        <a href="leaderboard" class="play-button">LEADERBOARD</a>
+    </p>
+</div>
+{% endblock %}

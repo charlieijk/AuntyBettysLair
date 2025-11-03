@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aunty Betty's Lair</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">WELCOME</a>
+        <a href="{{ url_for('login') }}">LOGIN</a>
+        <a href="{{ url_for('register') }}">REGISTER</a>
+    </div>
+
+    <div class="welcome-screen">
+        <h1>Aunty Betty's Lair</h1>
+        <h2>Enter the Dark Realm</h2>
+        <p>Prepare yourself for an epic adventure through treacherous mazes filled with demons and pests. Choose your character wisely and navigate through Aunty Betty's mysterious lair to achieve the highest score before time runs out!</p>
+        
+        <div class="game-intro">
+            <h3>Features:</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>🏰 Navigate through challenging mazes</li>
+                <li>⚔️ Battle demons and pests</li>
+                <li>🎭 Choose from 4 unique characters</li>
+                <li>⏱️ Race against time for high scores</li>
+                <li>🏆 Compete on the leaderboard</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="{{ url_for('login') }}" class="play-button">LOGIN TO PLAY</a>
+            <a href="{{ url_for('register') }}" class="play-button">CREATE ACCOUNT</a>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('howtoplay') }}" class="button">HOW TO PLAY</a>
+        </div>
+    </div>
+</body>
+</html>

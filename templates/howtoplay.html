@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auntybettyslair Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('signout') }}">SIGNOUT</a>
+    </div>
+
+    <img src="static/wasd.jpg" alt="WASD Key Image">
+    <h2>Movement:</h2>
+    <ul>
+        <li>Press W to move forward</li>
+        <li>Press S to move backward</li>
+        <li>Press A to move left</li>
+        <li>Press D to move right</li>
+    </ul>
+
+    <img src="static/arrowkey.jpg" alt="Arrow Key Image">
+    <h2>Actions:</h2>
+    <ul>
+        <li>Press <kbd>↑</kbd> to shoot in the up direction</li>
+        <li>Press <kbd>↓</kbd> to shoot in the down direction</li>
+        <li>Press <kbd>←</kbd> to shoot in the left direction</li>
+        <li>Press <kbd>→</kbd> to shoot in the right direction</li>
+    </ul>
+
+    <h2>Objectives:</h2>
+    <ol>
+        <h2>How to Win</h2>
+        <li>
+            <h3>Navigate through the maze</h3>
+            <ul>
+                <li>Explore the maze and find the pathway to make it to the finish line</li>
+                <li>There will be a countdown judging on how far you try to make it to the maze...... so make sure you beat the countdown and get the highest score!</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Kill the pest</h3>
+            <ul>
+                <li>Locate and shoot the pest when it appears and respawns</li>
+                <li>The pest will spawn at various positions within the game</li>
+            </ul>
+        </li>
+        <li>
+            <h3>Kill the demon</h3>
+            <ul>
+                <li>Locate and shoot the demon when it appears and respawns</li>
+                <li>The demon will spawn at various positions within the game</li>
+            </ul>
+        </li>
+    </ol>
+    <li>
+        <h2>How To Lose</h2>
+        <ul>
+            <li>You lose all your health points!</li>
+            <li>You lose the countdown</li>
+        </ul>
+    </li>
+
+    <h2>Only Tip!</h2>
+    <ul>
+        <li>Dont focus on the time, get a high score ! </li>
+    </ul>
+
+    <p>Happy Gaming!</p>
+</body>
+</html>

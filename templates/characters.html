@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aunty Betty's Lair - Character Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sprites.css') }}">
+
+    <script src="static/auntybetty.js"></script>
+
+</head>
+<body>
+    <h2>Choose Your Character</h2>
+    <form id="character-selection" action="auntybettyslair" style="margin-bottom: 20px;">
+        <input type="radio" id="hero" value="hero" onclick="selectCharacter('hero');chooseCharacter('hero');">
+        <label for="hero">Hero</label>
+
+        <input type="radio" id="mystic" value="mystic" onclick="selectCharacter('mystic');chooseCharacter('mystic');">
+        <label for="mystic">Mystic</label>
+
+        <input type="radio" id="rogue" value="rogue" onclick="selectCharacter('rogue');chooseCharacter('rogue');">
+        <label for="rogue">Rogue</label>
+
+        <input type="radio" id="warrior" value="warrior" onclick="selectCharacter('warrior');chooseCharacter('warrior');">
+        <label for="warrior">Warrior</label>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{{ url_for('home') }}" class="play-button">HOME</a>
+            <button type="submit" class="start-button"> PLAY </button>
+
+
+        </div>
+    </form>
+
+    <!-- Used encoded with help from the FETCH API to transfer javascript parameters into a session as I did, in case you were wondering. Here is the link.
+    https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    -->
+    <script>
+        document.getElementById('character-selection').addEventListener('submit', function(e){
+            console.log("submit");
+            e.preventDefault;
+        })
+        function chooseCharacter(character) {
+            fetch('./update_session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'character= ' + encodeURIComponent(character)
+            })
+            .then(response => response.text())
+            .then(data => console.log)
+        }
+    </script>
+
+
+    <canvas id="gameCanvas" width="64" height="64"></canvas>
+
+</body>
+</html>
